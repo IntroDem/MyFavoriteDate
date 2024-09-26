@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Редактировать дату
+{% endblock %}
+
+{% block body %}
+<h1>Редактировать дату</h1>
+<form method="POST">
+    <label for="title">Название:</label>
+    <input type="text" id="title" name="title" value="{{ date.title }}" required>
+    <label for="date">Дата:</label>
+    <input type="date" id="date" name="date" value="{{ date.date }}" required>
+    <label for="details">Детали:</label>
+    <textarea id="details" name="details">{{ date.details }}</textarea>
+    <button type="submit">Сохранить</button>
+</form>
+{% endblock %}

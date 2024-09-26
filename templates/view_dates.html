@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Просмотр дат
+{% endblock %}
+
+{% block body %}
+<h1>Просмотр дат</h1>
+<ul>
+    {% for date in dates %}
+        <li>
+            <a href="{{ url_for('date_details', id=date.id) }}">{{ date.title }} - {{ date.date }}</a>
+            <a href="{{ url_for('edit_date', id=date.id) }}">Редактировать</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

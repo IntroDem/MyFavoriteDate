@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<h1>Основная страница сайта</h1>
+<a href="{{ url_for('add_date') }}">Добавить новую дату</a>
+<ul>
+    {% for date in dates %}
+        <li>
+            <a href="{{ url_for('date_details', id=date.id) }}">{{ date.title }} - {{ date.date }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

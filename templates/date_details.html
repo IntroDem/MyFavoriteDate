@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Детали даты
+{% endblock %}
+
+{% block body %}
+<h1>Детали даты</h1>
+<h2>{{ date.title }}</h2>
+<p>Дата: {{ date.date }}</p>
+<p>Детали: {{ date.details }}</p>
+{% endblock %}

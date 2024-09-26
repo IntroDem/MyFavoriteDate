@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавить важную дату
+{% endblock %}
+
+{% block body %}
+<h1>Добавить важную дату</h1>
+<form method="POST">
+    <label for="title">Название:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="date">Дата:</label>
+    <input type="date" id="date" name="date" required>
+    <label for="details">Детали:</label>
+    <textarea id="details" name="details"></textarea>
+    <button type="submit">Добавить</button>
+</form>
+{% endblock %}
